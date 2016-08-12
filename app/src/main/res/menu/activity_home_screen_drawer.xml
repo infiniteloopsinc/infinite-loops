@@ -14,5 +14,18 @@
 
         </menu>
     </item>
+    <item android:title="Recycler View">
+        <menu>
+            <item
+                android:id="@+id/simple_rc"
+                android:icon="@drawable/ic_radio_button_checked_black_24dp"
+                android:title="Simple RecyclcerView" />
+            <item
+                android:id="@+id/custom_rc"
+                android:icon="@drawable/ic_radio_button_checked_black_24dp"
+                android:title="Custom RecyclerView" />
+
+        </menu>
+    </item>
 
 </menu>

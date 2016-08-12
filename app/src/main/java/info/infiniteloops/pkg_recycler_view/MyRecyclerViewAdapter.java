@@ -9,20 +9,22 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import info.infiniteloops.R;
+
 public class MyRecyclerViewAdapter extends RecyclerView
         .Adapter<MyRecyclerViewAdapter
-        .DataObjectHolder> {
+        .Rc_DataHolder> {
     private static String LOG_TAG = "MyRecyclerViewAdapter";
-    private ArrayList<DataObject> mDataset;
+    private ArrayList<Rc_Data> mDataset;
     private static MyClickListener myClickListener;
 
-    public static class DataObjectHolder extends RecyclerView.ViewHolder
+    public static class Rc_DataHolder extends RecyclerView.ViewHolder
             implements View
             .OnClickListener {
         TextView label;
         TextView dateTime;
 
-        public DataObjectHolder(View itemView) {
+        public Rc_DataHolder(View itemView) {
             super(itemView);
             label = (TextView) itemView.findViewById(R.id.textView);
             dateTime = (TextView) itemView.findViewById(R.id.textView2);
@@ -40,27 +42,27 @@ public class MyRecyclerViewAdapter extends RecyclerView
         this.myClickListener = myClickListener;
     }
 
-    public MyRecyclerViewAdapter(ArrayList<DataObject> myDataset) {
+    public MyRecyclerViewAdapter(ArrayList<Rc_Data> myDataset) {
         mDataset = myDataset;
     }
 
     @Override
-    public DataObjectHolder onCreateViewHolder(ViewGroup parent,
+    public Rc_DataHolder onCreateViewHolder(ViewGroup parent,
                                                int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.recyclerview_item, parent, false);
+                .inflate(R.layout.rc_simple_single_item, parent, false);
 
-        DataObjectHolder dataObjectHolder = new DataObjectHolder(view);
-        return dataObjectHolder;
+        Rc_DataHolder Rc_DataHolder = new Rc_DataHolder(view);
+        return Rc_DataHolder;
     }
 
     @Override
-    public void onBindViewHolder(DataObjectHolder holder, int position) {
+    public void onBindViewHolder(Rc_DataHolder holder, int position) {
         holder.label.setText(mDataset.get(position).getmText1());
         holder.dateTime.setText(mDataset.get(position).getmText2());
     }
 
-    public void addItem(DataObject dataObj, int index) {
+    public void addItem(Rc_Data dataObj, int index) {
         mDataset.add(dataObj);
         notifyItemInserted(index);
     }

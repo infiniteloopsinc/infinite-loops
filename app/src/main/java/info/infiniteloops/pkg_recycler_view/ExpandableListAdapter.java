@@ -11,14 +11,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.infiniteloopsinc.gk.R;
-import com.infiniteloopsinc.gk.externaldb.DatabaseAccess;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import info.infiniteloops.R;
+
 /**
- * Created by anandbose on 09/06/15.
+ * Created by Asna on Today :).
  */
 public class ExpandableListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public static final int HEADER = 0;
@@ -41,7 +41,7 @@ public class ExpandableListAdapter extends RecyclerView.Adapter<RecyclerView.Vie
         switch (type) {
             case HEADER:
                 LayoutInflater inflater = (LayoutInflater) parent.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                view = inflater.inflate(R.layout.list_header, parent, false);
+                view = inflater.inflate(R.layout.expandable_list_header, parent, false);
                 ListHeaderViewHolder header = new ListHeaderViewHolder(view);
                 return header;
             case CHILD:
@@ -125,16 +125,12 @@ public class ExpandableListAdapter extends RecyclerView.Adapter<RecyclerView.Vie
                 itemController.imgBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        itemController.databaseAccess = DatabaseAccess.getInstance(c);
-                        itemController.databaseAccess.open();
                         int drawableId = (Integer)itemController.imgBtn.getTag(R.id.imgFav);
                         if(drawableId == R.drawable.ic_fav_grey){
-                            itemController.databaseAccess.addFav(data.get(position).quesid,"1");
                             itemController.imgBtn.setTag(R.id.imgFav, R.drawable.ic_fav_red); //Set
                             itemController.imgBtn.setImageResource(R.drawable.ic_fav_red);
                             Toast.makeText(c,"Bookmark added",Toast.LENGTH_SHORT).show();
                         }else if(drawableId == R.drawable.ic_fav_red){
-                            itemController.databaseAccess.addFav(data.get(position).quesid,"0");
                             itemController.imgBtn.setTag(R.id.imgFav, R.drawable.ic_fav_grey); //Set
                             itemController.imgBtn.setImageResource(R.drawable.ic_fav_grey);
                             Toast.makeText(c,"Removed from bookmark",Toast.LENGTH_SHORT).show();
@@ -146,12 +142,7 @@ public class ExpandableListAdapter extends RecyclerView.Adapter<RecyclerView.Vie
                 break;
             case CHILD:
                 TextView itemTextView = (TextView) holder.itemView;
-                if(data.get(position).b) {
-                    itemTextView.setTextColor(ContextCompat.getColor(c, R.color.green));
-                }else{
-                    itemTextView.setTextColor(ContextCompat.getColor(c, R.color.black));
 
-                }
                 itemTextView.setText(data.get(position).text);
 
                 break;
@@ -173,7 +164,6 @@ public class ExpandableListAdapter extends RecyclerView.Adapter<RecyclerView.Vie
         public ImageView btn_expand_toggle;
         public ImageButton imgBtn;
         public Item refferalItem;
-        public DatabaseAccess databaseAccess;
 
         public ListHeaderViewHolder(View itemView) {
             super(itemView);
@@ -192,16 +182,14 @@ public class ExpandableListAdapter extends RecyclerView.Adapter<RecyclerView.Vie
         public int type;
         public Boolean b;
         public String text;
-        public String quesid;
         public List<Item> invisibleChildren;
 
         public Item() {
         }
 
-        public Item(int type, String text,Boolean b,String quesid) {
+        public Item(int type, String text) {
             this.type = type;
             this.b = b;
-            this.quesid = quesid;
             this.text = text;
         }
     }

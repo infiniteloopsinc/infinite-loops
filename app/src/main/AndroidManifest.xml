@@ -22,6 +22,12 @@
             android:parentActivityName=".HomeScreen" />
         <activity android:name=".pkg_list_view.Custom_Listview"
             android:parentActivityName=".HomeScreen"></activity>
+
+        <activity android:name=".pkg_recycler_view.Simple_recycler_view"
+            android:parentActivityName=".HomeScreen"></activity>
+
+        <activity android:name=".pkg_recycler_view.Custom_RecycelerView"
+            android:parentActivityName=".HomeScreen"></activity>
     </application>
 
 </manifest>

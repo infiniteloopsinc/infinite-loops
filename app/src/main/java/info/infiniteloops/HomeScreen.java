@@ -16,6 +16,8 @@ import android.view.MenuItem;
 
 import info.infiniteloops.pkg_list_view.Custom_Listview;
 import info.infiniteloops.pkg_list_view.Simple_Listview;
+import info.infiniteloops.pkg_recycler_view.Custom_RecycelerView;
+import info.infiniteloops.pkg_recycler_view.Simple_recycler_view;
 
 public class HomeScreen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -91,7 +93,13 @@ public class HomeScreen extends AppCompatActivity
             startActivity(new Intent(HomeScreen.this,Custom_Listview.class));
 
         }
+        if (id == R.id.simple_rc) {
+            startActivity(new Intent(HomeScreen.this,Simple_recycler_view.class));
+            // Handle the camera action
+        } else if (id == R.id.custom_rc) {
+            startActivity(new Intent(HomeScreen.this,Custom_RecycelerView.class));
 
+        }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
