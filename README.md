@@ -6,6 +6,11 @@
 # infinite-loops
 This file contains android tutorials
 you can find deep explaination over here http://infiniteloopsinc.com
+# Simple Recyclerview :
+![clist](http://infiniteloops.info/2016/08/11/simple-recyclerview-example-on-android/)
+# Custom Listview with Search :
+![slist](http://infiniteloops.info/2016/08/11/custom-recyclerview-with-dynamic-expandablelistview-in-android-example/)
+>>>>>>> bf923ee1458436c996d7b938feaad7ea67737082
 # Custom Listview with Search :
 ![clist](https://cloud.githubusercontent.com/assets/14331154/16993852/b57743aa-4ec2-11e6-8571-a90404f3c728.jpg)
 # Simple Listview with Search :
