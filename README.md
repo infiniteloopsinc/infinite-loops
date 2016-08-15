@@ -8,7 +8,7 @@ This file contains android tutorials
 you can find deep explaination over here http://infiniteloopsinc.com
 # Simple Recyclerview :
 ![clist](http://infiniteloops.info/wp-content/uploads/2016/08/android_marshmallow_update_dates_for_smartphones-520x245.png)
-# Custom Listview with Search :
+# Custom Recyclerview with Search :
 ![slist](http://infiniteloops.info/wp-content/uploads/2016/08/android_marshmallow_update_dates_for_smartphones-copy.png)
 
 # Custom Listview with Search :
