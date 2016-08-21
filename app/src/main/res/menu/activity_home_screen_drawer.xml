@@ -27,5 +27,14 @@
 
         </menu>
     </item>
+    <item android:title="Social Login">
+        <menu>
+            <item
+                android:id="@+id/SocialLogin"
+                android:icon="@drawable/ic_radio_button_checked_black_24dp"
+                android:title="Social Login" />
+
+        </menu>
+    </item>
 
 </menu>

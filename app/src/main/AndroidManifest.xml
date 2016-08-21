@@ -8,6 +8,12 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!--Facebook-->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <activity android:name=".login.Login_Activity"></activity>
+        <!--Facebook-->
         <activity
             android:name=".HomeScreen"
             android:theme="@style/AppTheme.NoActionBar">
@@ -20,14 +26,29 @@
         <activity
             android:name=".pkg_list_view.Simple_Listview"
             android:parentActivityName=".HomeScreen" />
-        <activity android:name=".pkg_list_view.Custom_Listview"
-            android:parentActivityName=".HomeScreen"></activity>
+        <activity
+            android:name=".pkg_list_view.Custom_Listview"
+            android:parentActivityName=".HomeScreen" />
+        <activity
+            android:name=".pkg_recycler_view.Simple_recycler_view"
+            android:parentActivityName=".HomeScreen" />
+        <activity
+            android:name=".pkg_recycler_view.Custom_RecycelerView"
+            android:parentActivityName=".HomeScreen" />
+        <!--Facebook Login Start-->
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
 
-        <activity android:name=".pkg_recycler_view.Simple_recycler_view"
-            android:parentActivityName=".HomeScreen"></activity>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
 
-        <activity android:name=".pkg_recycler_view.Custom_RecycelerView"
-            android:parentActivityName=".HomeScreen"></activity>
+                <data android:scheme="FB Login" />
+            </intent-filter>
+        </activity>
+        <!--Facebook login END-->
     </application>
 
 </manifest>
