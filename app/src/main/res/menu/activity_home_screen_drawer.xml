@@ -37,4 +37,14 @@
         </menu>
     </item>
 
+    <item android:title="Misceleneuos">
+        <menu>
+            <item
+                android:id="@+id/cardview"
+                android:icon="@drawable/ic_radio_button_checked_black_24dp"
+                android:title="CardView" />
+
+        </menu>
+    </item>
+
 </menu>

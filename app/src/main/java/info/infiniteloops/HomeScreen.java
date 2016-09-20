@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import info.infiniteloops.ICardView.ICardView;
 import info.infiniteloops.login.Login_Activity;
 import info.infiniteloops.pkg_list_view.Custom_Listview;
 import info.infiniteloops.pkg_list_view.Simple_Listview;
@@ -103,6 +104,11 @@ public class HomeScreen extends AppCompatActivity
         }
         else if (id == R.id.SocialLogin) {
             startActivity(new Intent(HomeScreen.this,Login_Activity.class));
+
+        }
+
+        else if (id == R.id.cardview) {
+            startActivity(new Intent(HomeScreen.this,ICardView.class));
 
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
