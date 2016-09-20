@@ -1,7 +1,10 @@
 
 # infinite-loops
 This file contains android tutorials
-you can find deep explaination over here http://infiniteloopsinc.com
+you can find deep explaination over here http://infiniteloops.info
+# Social Login :
+![clist](http://infiniteloops.info/wp-content/uploads/2016/08/maxresdefault-720x340.jpg)
+
 # Simple Recyclerview :
 ![clist](http://infiniteloops.info/wp-content/uploads/2016/08/android_marshmallow_update_dates_for_smartphones-520x245.png)
 # Custom Recyclerview with Search :
