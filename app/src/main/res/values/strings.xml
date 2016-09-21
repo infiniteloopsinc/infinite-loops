@@ -7,4 +7,6 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="title_activity_material__view_pager">Material_View_pager</string>
+    <string name="section_format">Introduction section: %1$d</string>
 </resources>

@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import info.infiniteloops.ICardView.ICardView;
+import info.infiniteloops.iviewpager.Material_View_pager;
 import info.infiniteloops.login.Login_Activity;
 import info.infiniteloops.pkg_list_view.Custom_Listview;
 import info.infiniteloops.pkg_list_view.Simple_Listview;
@@ -115,6 +116,11 @@ public class HomeScreen extends AppCompatActivity
 
         else if (id == R.id.three_rv) {
             startActivity(new Intent(HomeScreen.this,ThreeRV.class));
+
+        }
+
+        else if (id == R.id.viewpager) {
+            startActivity(new Intent(HomeScreen.this,Material_View_pager.class));
 
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
