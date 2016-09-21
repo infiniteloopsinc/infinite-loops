@@ -24,6 +24,10 @@
                 android:id="@+id/custom_rc"
                 android:icon="@drawable/ic_radio_button_checked_black_24dp"
                 android:title="Custom RecyclerView" />
+            <item
+                android:id="@+id/three_rv"
+                android:icon="@drawable/ic_radio_button_checked_black_24dp"
+                android:title="Multiple RecyclerView" />
 
         </menu>
     </item>

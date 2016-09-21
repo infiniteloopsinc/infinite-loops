@@ -20,6 +20,7 @@ import info.infiniteloops.pkg_list_view.Custom_Listview;
 import info.infiniteloops.pkg_list_view.Simple_Listview;
 import info.infiniteloops.pkg_recycler_view.Custom_RecycelerView;
 import info.infiniteloops.pkg_recycler_view.Simple_recycler_view;
+import info.infiniteloops.pkg_recycler_view.ThreeRV;
 
 public class HomeScreen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -109,6 +110,11 @@ public class HomeScreen extends AppCompatActivity
 
         else if (id == R.id.cardview) {
             startActivity(new Intent(HomeScreen.this,ICardView.class));
+
+        }
+
+        else if (id == R.id.three_rv) {
+            startActivity(new Intent(HomeScreen.this,ThreeRV.class));
 
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

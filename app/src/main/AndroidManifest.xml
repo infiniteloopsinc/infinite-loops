@@ -51,7 +51,8 @@
             </intent-filter>
         </activity>
         <!-- Facebook login END -->
-        <activity android:name=".ICardView.ICardView"></activity>
+        <activity android:name=".ICardView.ICardView" />
+        <activity android:name=".pkg_recycler_view.ThreeRV"></activity>
     </application>
 
 </manifest>
