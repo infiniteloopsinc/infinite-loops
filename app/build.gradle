@@ -28,6 +28,10 @@ dependencies {
     compile 'com.futuremind.recyclerfastscroll:fastscroll:0.1.5'
     compile 'com.facebook.android:facebook-android-sdk:[4,5)'
     compile 'com.google.android.gms:play-services-auth:9.4.0'
+    //Add these two libraries
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.3.1'
+    compile 'com.android.volley:volley:1.0.0'
+
 
 }
 apply plugin: 'com.google.gms.google-services'

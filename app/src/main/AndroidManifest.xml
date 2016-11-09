@@ -56,7 +56,8 @@
         <activity
             android:name=".iviewpager.Material_View_pager"
             android:label="@string/title_activity_material__view_pager"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity android:name=".gson.GSON_Examplee"></activity>
     </application>
 
 </manifest>
